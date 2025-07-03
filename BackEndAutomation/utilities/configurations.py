@@ -5,3 +5,6 @@ def getConfig():
     config.read('utilities/properties.ini')
     return config
 
+def getPassword():
+    return "ddsfere"
+
