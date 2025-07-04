@@ -38,6 +38,3 @@ github_respones = requests.get(url,verify=False,auth=('rahulshettyacademy', getP
 print(github_respones.status_code)
 
 
-
-
-
