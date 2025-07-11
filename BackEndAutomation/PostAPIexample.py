@@ -32,9 +32,22 @@ print(res_json['msg'])
 assert res_json['msg'] == 'book is successfully deleted'
 
 # Authentication
+se = requests.Session() # Create a session object
+se.auth = ('rahulshettyacademy', getPassword()) #Authentication using session
+
+
+
 url = "https://api.github.com/user"
 github_respones = requests.get(url,verify=False,auth=('rahulshettyacademy', getPassword()))
 
 print(github_respones.status_code)
+
+
+url2 = "https://api.github.com/user/repos"
+response = se.get(url2,auth=('rahulshettyacademy', getPassword()))
+print(response.status_code)
+
+
+
 
 
