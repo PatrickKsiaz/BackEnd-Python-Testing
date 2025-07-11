@@ -4,7 +4,7 @@ import requests
 
 #'visit-month'
 cookie = {'visit-month': 'February',}
-response = requests.get('https://rahulshettyacademy.com',allow_redirects=False,cookies=cookie)
+response = requests.get('https://rahulshettyacademy.com',allow_redirects=False,cookies=cookie,timeout=1)    # allow_redirects=False will not follow the redirect
 #301,200
 print(response.history)
 print(response.status_code)
