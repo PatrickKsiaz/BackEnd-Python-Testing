@@ -1,11 +1,11 @@
 import mysql.connector
+from utilities.configurations import *
 
 #host, database,username,passsword
 
 
-
+conn = getConnection() 
 print(conn.is_connected())
-
 cursor = conn.cursor()
 cursor.execute('select * from CustomerInfo')
 #row = cursor.fetchone()
