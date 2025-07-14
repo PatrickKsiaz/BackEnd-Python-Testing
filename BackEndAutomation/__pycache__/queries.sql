@@ -38,10 +38,13 @@ INSERT INTO Books values("Selenium","kosncs34fr","23","Rahul Shetty");
 INSERT INTO Books values("Jmeter","rtbrss24t","234","Rahul Shetty3");
 select * from Books;
 select * from CustomerInfo;
+update customerInfo set Location = "US" where CourseName = "Jmeter";
+delete customerInfo where CourseName = "WebServices";
+
+
 SET SQL_SAFE_UPDATES = 0;
 update customerInfo set Location = 'US' where CourseName = 'Jmeter';
 delete from customerInfo where courseName = 'WebServices';
-
 
 
 
