@@ -9,7 +9,9 @@ from utilities.resources import *
 import requests
 
 url = getConfig['API']['endpoint']+ ApiResources.addBook
-addBook_response = requests.post(url,json=addBookPayload("fefrewe"),headers=headers,)
+headers = {"Content-Type": "application/json"}
+quey= 'select * from Books'
+addBook_response = requests.post(url,json=buildPayloadFromDB("fefrewe"),headers=headers, )
 print(addBook_response.json())
 response_json = addBook_response.json()
 print(type(response_json))
@@ -46,8 +48,5 @@ print(github_respones.status_code)
 url2 = "https://api.github.com/user/repos"
 response = se.get(url2,auth=('rahulshettyacademy', getPassword()))
 print(response.status_code)
-
-
-
 
 
